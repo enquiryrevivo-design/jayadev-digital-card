@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import QRCode from 'qrcode';
-import { Phone, Mail, Globe, Linkedin, MessageCircle, Download, Copy, ExternalLink, BriefcaseBusiness, Users, Megaphone, QrCode, Upload, Check, MapPin } from 'lucide-react';
+import { Phone, Mail, Globe, Link2, MessageCircle, Download, Copy, ExternalLink, BriefcaseBusiness, Users, Megaphone, QrCode, Upload } from 'lucide-react';
 import './style.css';
 
 const profile = {
@@ -79,7 +79,7 @@ function App() {
     <div className="ambient ambient-one" /><div className="ambient ambient-two" />
     <header className="topbar">
       <a className="brand" href={profile.website} target="_blank" rel="noreferrer" aria-label="TalentGrade website">
-        <span className="brand-mark">T</span><span className="brand-copy"><strong>TalentGrade</strong><small>HUMAN RESOURCES CONSULTANCIES</small></span>
+        <img className="brand-logo" src="/talentgrade-logo.png" alt="TalentGrade" />
       </a>
       <span className="availability"><i /> Digital Business Card</span>
     </header>
@@ -111,7 +111,7 @@ function App() {
       <div className="contact-item"><span className="contact-icon"><Phone/></span><div><small>PHONE</small><a href={`tel:${profile.phone}`}>{profile.phone}</a></div></div>
       <div className="contact-item"><span className="contact-icon"><Mail/></span><div><small>EMAIL</small><a href={`mailto:${profile.email}`}>{profile.email}</a></div></div>
       <div className="contact-item"><span className="contact-icon"><Globe/></span><div><small>WEBSITE</small><a href={profile.website} target="_blank" rel="noreferrer">talentgradehr.com</a></div></div>
-      <div className="contact-item"><span className="contact-icon"><Linkedin/></span><div><small>LINKEDIN</small><a href={profile.linkedin} target="_blank" rel="noreferrer">View profile</a></div></div>
+      <div className="contact-item"><span className="contact-icon"><Link2/></span><div><small>LINKEDIN</small><a href={profile.linkedin} target="_blank" rel="noreferrer">View profile</a></div></div>
     </section>
 
     <section className="about panel">
@@ -130,7 +130,7 @@ function App() {
       <p className="section-label"><ExternalLink/> QUICK LINKS</p>
       <div className="link-grid">
         <a href={profile.website} target="_blank" rel="noreferrer"><Globe/><span>TalentGrade website</span><ExternalLink className="tiny"/></a>
-        <a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin/><span>Connect on LinkedIn</span><ExternalLink className="tiny"/></a>
+        <a href={profile.linkedin} target="_blank" rel="noreferrer"><Link2/><span>Connect on LinkedIn</span><ExternalLink className="tiny"/></a>
         <a href={`mailto:${profile.email}`}><Mail/><span>Send an email</span><ExternalLink className="tiny"/></a>
       </div>
     </section>
